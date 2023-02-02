@@ -12,14 +12,17 @@ function App() {
   function updateOperator(operator: string): void {
     setExpre((prev) => prev + operator);
   }
+  function revealResult():void{
+
+  }
   let numbers: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
   let operators: string[] = ["-", "+", "/", "*"];
   return (
     <div className="mt-24 p-4">
       <div className="w-full flex items-center justify-center">
-        {expr && (
+        {(
           <div className="text-lg bg-blue-800 text-gray-100 py-8 px-4 rounded-lg text-center my-16 mx-auto">
-            {expr}
+            <input type="text" value={expr} contentEditable={false} className="w-full py-1 px-2 text-slate-800 bg-slate-200" />
           </div>
         )}
       </div>
